@@ -1,0 +1,22 @@
+-- Create the records table
+CREATE TABLE records (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  department VARCHAR(50) NOT NULL,
+  roll VARCHAR(20) NOT NULL,
+  shift VARCHAR(20) NOT NULL,
+  brandSD VARCHAR(50) NOT NULL,
+  deviceDate DATE NOT NULL,
+  engineerName VARCHAR(50) NOT NULL,
+  inChargeName VARCHAR(50) NOT NULL
+);
+
+-- Create the items table
+CREATE TABLE items (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  recordId INT NOT NULL,
+  itemName VARCHAR(50) NOT NULL,
+  unit VARCHAR(20) NOT NULL,
+  code VARCHAR(20) NOT NULL,
+  timeValue VARCHAR(20) NOT NULL,
+  FOREIGN KEY (recordId) REFERENCES records(id)
+);
