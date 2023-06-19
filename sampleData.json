@@ -1,0 +1,25 @@
+{
+    "department": "Example Department",
+    "roll": "Example Roll",
+    "shift": "Example Shift",
+    "brandSD": "Example Brand SD",
+    "deviceDate": "2023-06-19",
+    "engineerName": "Example Engineer Name",
+    "inChargeName": "Example In-Charge Name",
+    "items": [
+      {
+        "itemName": "Example Item 1",
+        "unit": "Example Unit 1",
+        "code": "Example Code 1",
+        "shift": "Example Item Shift 1",
+        "timeValue": "Example Time Value 1"
+      },
+      {
+        "itemName": "Example Item 2",
+        "unit": "Example Unit 2",
+        "code": "Example Code 2",
+        "shift": "Example Item Shift 2",
+        "timeValue": "Example Time Value 2"
+      }
+    ]
+  }

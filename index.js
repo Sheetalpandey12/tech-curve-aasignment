@@ -1,6 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
-
+const sampleData= require('./sampleData.json')
 const app = express();
 app.use(express.json()); 
 
@@ -38,11 +38,7 @@ app.get("/records", (req, res) => {
           engineerName,
           inChargeName,
           itemName,
-          unit,
-          code,
-          recordShift,
-          itemShift,
-          timeValue,
+          unit, code, recordShift,itemShift,timeValue,
         } = row;
         if (!recordsMap.has(id)) { 
           recordsMap.set(id, {
@@ -70,8 +66,8 @@ app.get("/records", (req, res) => {
 
 // POST API - Create a new record
 app.post('/records', (req, res) => {
-    const { department, roll, shift, brandSD, deviceDate, engineerName, inChargeName, items } = req.body;
-    console.log('Received POST request with body:', req.body);
+    const { department, roll, shift, brandSD, deviceDate, engineerName, inChargeName, items } = sampleData;
+    console.log('Received POST request with body:', sampleData);
 
     // Insert the record into the database
     pool.query(
